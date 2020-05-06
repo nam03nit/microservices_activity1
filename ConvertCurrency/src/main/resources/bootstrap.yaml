@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    config:
+      uri:  
+      fail-fast: false
+  application:
+    name: convertCurrency
+  profiles:
+    active: convertCurrency
+  zipkin:
+    base-url: http://192.168.99.101:9411/
+
+server:
+  port: 9090
+
+

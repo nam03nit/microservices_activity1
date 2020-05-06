@@ -1,0 +1,30 @@
+# Properties active for ALL profiles:
+---
+spring:
+  cloud:
+    config:
+      uri:   # Expect the Spring Cloud Config server to be running on localhost, port 8001.  
+  zipkin:
+    base-url: http://192.168.99.101:9411/
+server:
+  port: 0 # Select any available port if neither port nor server port are specified.
+
+ 
+
+  
+
+
+# Depending on which profile is active, the application gives 
+# itself a different name when registering with Eureka
+---
+spring:
+  application:
+    name: conversionFactor
+  profiles:
+    active: conversionFactor
+
+
+        
+  
+         
+    
