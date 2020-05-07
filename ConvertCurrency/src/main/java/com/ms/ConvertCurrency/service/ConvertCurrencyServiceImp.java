@@ -31,4 +31,14 @@ public class ConvertCurrencyServiceImp implements ConvertCurrencyService{
 
 	}
 	
+	public String addValues(String countryCode, double conversionFactor) {
+		String message  = conversionFactorFetch.addConversionFactor(countryCode, conversionFactor);
+		return message;
+	}
+	
+	public String updateValues(String countryCode, double conversionFactor) {
+		String message = conversionFactorFetch.updateConversionFactor(countryCode, conversionFactor);
+		return message;
+	}
+	
 }

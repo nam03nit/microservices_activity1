@@ -19,4 +19,14 @@ public class ConvertCurrencyController {
 			return convertCurrencyService.getAmount(amount, countryCode);	
 	}
 	
+	@RequestMapping(path = "/add", method = RequestMethod.POST)
+	public String addConversionFactor(@RequestParam(value="countryCode") String countryCode, @RequestParam(value="conversionFactor") double conversionFactor) {		
+			return convertCurrencyService.addValues(countryCode, conversionFactor);	
+	}
+	
+	@RequestMapping(path = "/update", method = RequestMethod.PUT)
+	public String updateConversionFactor(@RequestParam(value="countryCode") String countryCode, @RequestParam(value="conversionFactor") double conversionFactor) {		
+			return convertCurrencyService.updateValues(countryCode, conversionFactor);	
+	}
+	
 }
